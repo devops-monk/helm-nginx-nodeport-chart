@@ -1,0 +1,18 @@
+replicaCount: 2
+
+image:
+  repository: nginx
+  pullPolicy: IfNotPresent
+  tag: ""
+
+service:
+  type: NodePort
+  port: 80
+  nodePort: 30007
+
+autoscaling:
+  enabled: false
+
+nginx:
+  conf:
+    message: "Devops-Monk helm tutorial 2020"
